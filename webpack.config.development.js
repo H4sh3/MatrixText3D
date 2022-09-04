@@ -3,8 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const { outputConfig, copyPluginPatterns, entryConfig, devServer } = require("./env.config");
 
-module.exports = (env, options) => 
-{
+module.exports = (env, options) => {
     return {
         mode: options.mode,
         entry: entryConfig,
@@ -41,7 +40,7 @@ module.exports = (env, options) =>
                     ],
                 },
                 {
-                    test: /\.(?:ico|gif|png|jpg|jpeg|svg)$/i,
+                    test: /\.(?:ico|gif|png|jpg|jpeg|svg|json)$/i,
                     type: "javascript/auto",
                     loader: "file-loader",
                     options: {
